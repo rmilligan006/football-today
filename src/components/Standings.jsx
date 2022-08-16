@@ -6,8 +6,8 @@ import axios from "axios";
 const Standings = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [selectedLeague, setSelectedLeague] = useState("eng.1");
-  const [selectedYear, setSelectedYear] = useState("2022");
+  const [selectedLeague] = useState("eng.1");
+  const [selectedYear] = useState("2022");
 
   useEffect(() => {
     setLoading(true);
