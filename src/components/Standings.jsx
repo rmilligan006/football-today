@@ -32,12 +32,7 @@ const Standings = () => {
           </p>
         </div>
         {loading ? (
-          <Watch
-            color="#242F9B"
-            height={180}
-            width={180}
-            className="flex items-center justify-center"
-          />
+          <Watch color="#242F9B" height={180} width={180} className="pt-10" />
         ) : (
           data?.map((data, index) => (
             <div key={index} className="m-5">

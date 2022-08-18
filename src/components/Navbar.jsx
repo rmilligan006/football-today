@@ -21,7 +21,7 @@ const Navbar = () => {
               <Link to="/Standings">Standings</Link>
             </li>
             <li className="m-2 font-serif">
-              <Link to="/News">News</Link>
+              <Link to="/Scores">Upcoming Games</Link>
             </li>
           </ul>
         </div>
@@ -50,7 +50,7 @@ const Navbar = () => {
           </li>
           <li className="m-2 font-serif text-3xl">
             <Link onClick={handleClick} to="/News">
-              News
+              Upcoming games
             </Link>
           </li>
         </ul>
