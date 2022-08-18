@@ -38,7 +38,7 @@ const Standings = () => {
             <div key={index} className="m-5">
               <h1>
                 <span>
-                  {`${index + 1},`}
+                  {`${index + 1}.`}
                   <img
                     src={data.team.logos[0]?.href}
                     alt="Team logos"

@@ -12,7 +12,7 @@ const Scores = () => {
       "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard"
     )
       .then((res) => {
-        console.log(res.data.events);
+        console.log(res.data.season);
         setData(res.data.events);
       })
       .catch((err) => console.log(err))
@@ -22,11 +22,13 @@ const Scores = () => {
     <div>
       <>
         <div className=" w-full flex flex-col items-center justify-center pt-5 ">
-          <p className="text-5xl tracking-widest text-center">Upcoming Games</p>
+          <p className="text-3xl tracking-widest font-serif font-semibold w-full bg-white text-center shadow-xl px-2 py-2">
+            Upcoming Games
+          </p>
           <img
             src="https://a.espncdn.com/i/leaguelogos/soccer/500/23.png"
             alt="EPL Logo"
-            className="w-[20%]"
+            className="w-[20%] pt-4"
           />
           <div>
             <div>
@@ -41,9 +43,9 @@ const Scores = () => {
                 ) : (
                   data.map((data, index) => (
                     <div key={index} className="w-full">
-                      <div className="m-5 bg-white px-5 py-5 text-center w-[60]">
-                        <p className="text-2xl tracking-widest">{data.name}</p>
-
+                      <div className="m-5 bg-white px-7 py-7 text-center w-[60]">
+                        <p className="text-xl tracking-widest">{data.name}</p>
+                        <p></p>
                         <p className="tracking-widest pt-5">{data.date}</p>
                       </div>
                     </div>

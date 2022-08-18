@@ -22,19 +22,21 @@ const Main = () => {
     <>
       <div className=" w-full h-screen pt-5">
         <div>
-          <h3 className="text-2xl underline-red text-center pt-5">
+          <h3 className="text-2xl font-serif font-semibold w-full bg-white text-center shadow-xl px-2 py-2">
             Today's News
           </h3>
           <div>
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-12 text-center py-8 pb-2">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 text-center py-8 pb-2">
               {loading ? (
                 <Watch color="#242F9B" height={180} width={180} />
               ) : (
                 data?.map((data, index) => (
-                  <div key={index} className="m-5 bg-white px-5 py-5">
-                    <img src={data.images[0]?.url} alt="/" className="" />
-                    <p>{data.description}</p>
-                    
+                  <div
+                    key={index}
+                    className="m-5 shadow-md shadow-[#040c16] hover:scale-105 duration-300 bg-[#03568E] rounded-3xl pt-4 text-white"
+                  >
+                    <img src={data.images[0]?.url} alt="/" className="px-4" />
+                    <p className="px-4 py-4">{data.description}</p>
                   </div>
                 ))
               )}
